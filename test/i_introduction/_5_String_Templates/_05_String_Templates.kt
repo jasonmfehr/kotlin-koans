@@ -1,7 +1,9 @@
 package i_introduction._5_String_Templates
 
+import org.hamcrest.CoreMatchers
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
+import org.junit.Assert.assertThat
 import org.junit.Test
 import java.util.regex.Pattern
 
