@@ -1,5 +1,7 @@
 package ii_collections
 
+import v_builders.examples.myApply
+
 fun example7() {
     val result = listOf("a", "b", "ba", "ccc", "ad").groupBy { it.length }
 
@@ -8,5 +10,5 @@ fun example7() {
 
 fun Shop.groupCustomersByCity(): Map<City, List<Customer>> {
     // Return a map of the customers living in each city
-    todoCollectionTask()
+    return this.customers.groupBy { it.city }
 }
