@@ -34,3 +34,14 @@ class DateRange(val start: MyDate, val endInclusive: MyDate) : Iterable<MyDate> 
 operator fun DateRange.contains(other: MyDate): Boolean {
     return start.toInt() <= other.toInt() && other.toInt() <= endInclusive.toInt()
 }
+
+data class IntervalNumber(val interval: TimeInterval, val number: Int) {
+}
+
+operator fun MyDate.plus(interval: TimeInterval): MyDate {
+    return this.addTimeIntervals(interval, 1)
+}
+
+operator fun TimeInterval.times(number: Int): IntervalNumber {
+    return IntervalNumber(this, number)
+}
